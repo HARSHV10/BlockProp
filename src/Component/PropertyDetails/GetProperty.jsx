@@ -9,8 +9,7 @@ export default function GetProperty() {
     const [data , setdata]=useState();
     const [idx,  setidx] =useState(0);
     return(
-        <div>
-        <Navbar/>  
+        <div> 
         <p className="mt-10 text-center text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
       Get Property Information
     </p> 

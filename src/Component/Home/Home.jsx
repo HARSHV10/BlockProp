@@ -81,11 +81,12 @@ const testimonials = [
 
 
 export default function Home() {
+  // <BackgroundBeams/>
   return (
     <div>
-    <Navbar/>
+    
+    <div>
     <SparklesPreview/>
-    <BackgroundBeams/>
     <div className='m-10'>
     <StickyScroll content={content} />
     </div>
@@ -113,19 +114,19 @@ export default function Home() {
 />
 
 <AnimatedPinDemo
-  props={{
-    title: "Change Property Status",
-    link: "http://localhost:5173/changeStatus",
+props={{
+  title: "Change Property Status",
+  link: "http://localhost:5173/changeStatus",
     heading: "Update Property Status",
     text: "Securely update the status of a property, such as marking it as sold or transferred.",
   }}
 />
-    </div>
-    </div>
+</div>
+</div>
 
 
-    <div className='text-white text-7xl bold'>
-    <p className=" text-center text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
+<div className='text-white text-7xl bold'>
+<p className=" text-center text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
         Testimonials
       </p>
     </div>
@@ -137,6 +138,7 @@ export default function Home() {
       />
     </div>
 
+    </div>
     </div>
   )
 }
