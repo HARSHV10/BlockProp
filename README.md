@@ -10,18 +10,13 @@ This project is a combination of a web application built with React and Vite, an
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/your-repo/web-app-smart-contract.git`
-2. Navigate to the project directory: `cd web-app-smart-contract`
+1. Clone the repository: `git clone https://github.com/HARSHV10/BlockProp`
+2. Navigate to the project directory: `cd BlockProp`
 3. Install the dependencies for the web app: `cd client && npm install`
-4. Install the dependencies for the smart contract: `cd ../contract && npm install`
-
-## Smart Contract
-
-The smart contract is a decentralized application (dApp) built on the Ethereum blockchain. It is written in Solidity and is located in the `contract` directory. The `contracts/YourContract.sol` file contains the main smart contract logic, and the `contracts/Migrations.sol` file is used for deploying the contract to the blockchain. To deploy the smart contract to the desired network, use the appropriate deployment method. After deploying the contract, make sure to update the contract address in the web app's configuration file (`client/src/config.js`).
 
 ## Web App
 
-The web app is built with React and Vite. You can start the development server with the following command: `cd client && npm run dev`. This will start the development server at `http://localhost:3000`. You can now interact with the web app and connect it to your Ethereum wallet (Metamask or any other wallet).
+The web app is built with React and Vite. You can start the development server with the following command: `cd client && npm run dev`. This will start the development server at `http://localhost:5173`. You can now interact with the web app and connect it to your Ethereum wallet (Metamask or any other wallet).
 
 ## Building for Production
 
