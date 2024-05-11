@@ -2,8 +2,16 @@ import React, { useState } from 'react'
 import {contract} from '../../helper/getContract_instance'
 import Web3, { Contract } from 'web3';
 import Navbar from '../Navbar/Navbar';
+import { MultiStepLoader as Loader } from '../../ui/multiStepLoader';
+import { IconSquareRoundedX } from "@tabler/icons-react";
 
 export default function AddNominee() {
+  const loadingStates = [
+    { text: "Getting the Contract Instance" },
+    { text: "Fetching Data from the Blockchain" },
+    { text: "Processing Transactions" },
+    { text: "Updating User Interface" }
+  ];
 
     const web3 = new Web3(window.ethereum);
 
@@ -11,6 +19,7 @@ export default function AddNominee() {
     const [currAcc, setAcc]=useState()
     const [newAcc , setNewAcc]=useState();
     const [idx , setidx]=useState();
+    const [loading, setloading]=useState(false);
 
     async function Connect(){
     const accounts = await web3.eth.getAccounts();
@@ -23,10 +32,13 @@ export default function AddNominee() {
     Connect();
 
     async function addNominee(idx ,addr){
-        contract.methods.addNominee(parseInt(idx),addr).send({from:currAcc})
+      setloading(true);
+      await contract.methods.addNominee(parseInt(idx),addr).send({from:currAcc})
         .then(val=>{
+
           console.log(val);
-          alert("nominee added Successfully");
+          setloading(false);
+          // alert("nominee added Successfully");
         }).catch(e=>{
           console.log(e);
         })
@@ -34,7 +46,8 @@ export default function AddNominee() {
 
     return (
         <div>
-        <Navbar/>
+        <Loader loadingStates={loadingStates} loading={loading} duration={4000} />
+       
         <p className="mt-10 text-center text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
         Add Nominee
       </p>
