@@ -4,9 +4,9 @@ import { SparklesCore } from "../ui/spakels";
 export function SparklesPreview() {
   return (
     <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
-        C.U.B.E
-      </h1>
+    <h1 className="text-center text-13xl sm:text-9xl font-bold relative z-20 pl-2 pr-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
+    C.U.B.E
+  </h1>
       
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}

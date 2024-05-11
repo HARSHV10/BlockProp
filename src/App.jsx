@@ -18,6 +18,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Component/Home/Home'
 import Navbar from './Component/Navbar/Navbar'
 import GlobeDemo from '../src/ui_test/globe_test'
+import { GridBackgroundDemo } from './Component/GridBG/GridBG'
 function App() {
 
   // <h1 className='text-3xl font-bold underline'>hello</h1>
@@ -29,6 +30,7 @@ function App() {
     <div>
     <Router>
     <Navbar/>
+    
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path='/addNominee' element={<AddNominee/>}/>

@@ -44,9 +44,11 @@ export const StickyScroll = ({
     "var(--black)",
   ];
   const linearGradients = [
-    "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
-    "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
-    "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+    // "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
+    // "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
+    // "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+    "linear-gradient(to bottom right, rgba(var(--cyan-500), 0.5), rgba(var(--emerald-500), 0.5))"
+
   ];
   return (
     <motion.div
